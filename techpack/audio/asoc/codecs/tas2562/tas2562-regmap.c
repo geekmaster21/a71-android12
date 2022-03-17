@@ -670,10 +670,9 @@ static void irq_work_routine(struct work_struct *work)
 	TAS2562_LATCHEDINTERRUPTREG1_BROWNOUTFLAGSTICKY_INTERRUPT)) {
 		p_tas2562->mn_err_code |= ERROR_BROWNOUT;
 		dev_err(p_tas2562->dev, "brownout!\n");
-	} else
 		p_tas2562->mn_err_code &= ~ERROR_BROWNOUT;
-
-		goto reload;
+	} else 
+		  goto reload;
 	} else {
 		n_counter = 2;
 
