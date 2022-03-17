@@ -1,0 +1,6 @@
+config SEC_A71_PROJECT
+        default n
+        bool "Samsung A71 Project"
+        help
+          Support for Samsung A71 Project
+
