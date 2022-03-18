@@ -16,8 +16,7 @@
 
   The above example is for i386 - the parameters vary from architectures.
   Eventually look up LDFLAGS_BLOB in an older version of the
-  arch/$(ARCH)/Makefile to see the flags used before .incbin was introduced.
-
+  arch/$(ARCH)/Makefile to see the flags used before .incbin was introduced
   Using .incbin has the advantage over ld that the correct flags are set
   in the ELF header, as required by certain architectures.
 */
