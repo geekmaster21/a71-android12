@@ -3,6 +3,8 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: make
-
+  - init: git clone --depth=1 https://github.com/proprietary-stuff/llvm-arm-toolchain-ship-10.0.git llvm-sdclang &&
+          git clone --depth=1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git gcc &&
+          git clone https://gitlab.com/orangefox/misc/scripts t &&
+          cd t && bash setup/android_build_env.sh && cd /workspace/a71-android12 && ./build_kernel.sh
 
